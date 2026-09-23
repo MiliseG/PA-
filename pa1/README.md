@@ -50,29 +50,13 @@ En esta evaluación se utilizan principalmente estructuras estáticas porque con
 
 1.2 ¿Por qué utilizar arreglos y matrices?
 
-Los arreglos y matrices permiten almacenar datos del mismo tipo de forma organizada.
+Se utilizan arreglos para almacenar y organizar datos en una sola dimensión, como la cantidad de inscritos en los talleres.
 
-Un arreglo unidimensional o vector es adecuado cuando los datos se encuentran organizados en una sola dimensión. En este caso se utiliza para almacenar la cantidad de inscritos de los talleres.
-
-Por ejemplo:
-
-[28, 15, 34, 21, 19, 40, 12, 26]
-
-Cada elemento puede ser consultado mediante un índice.
-
-Una matriz permite organizar información utilizando filas y columnas. En este caso, las filas representan las aulas y las columnas representan los horarios.
-
-Esta estructura permite realizar recorridos horizontales para obtener información por aula y recorridos verticales para obtener información por horario.
+Las matrices permiten organizar datos en filas y columnas, por lo que son adecuadas para representar la ocupación de las aulas según los diferentes horarios.
 
 1.3 Relación entre dato, algoritmo y estructura de datos
 
-Los datos son los valores que se necesitan almacenar y procesar. 
-
-La estructura de datos determina cómo se organizan esos valores. Por ejemplo, se utiliza un vector para los inscritos y una matriz para representar la ocupación de aulas y horarios.
-
-El algoritmo indica los pasos que debe seguir el programa para procesar esos datos. Por ejemplo, recorrer un vector para encontrar el mayor y menor valor, o recorrer una matriz para calcular los totales.
-
-Por lo tanto, los tres conceptos están relacionados: los datos representan la información, la estructura permite organizarla y el algoritmo permite procesarla para obtener un resultado.
+Los tres conceptos están relacionados porque los datos representan la información, la estructura permite organizarla y el algoritmo permite procesarla para obtener un resultado.
 
 ## Actividad 2 — Arreglo unidimensional
 
@@ -83,6 +67,7 @@ El vector utilizado en el programa es:
 2.1 Representación del vector
 
 Índice:  0   1   2   3   4   5   6   7
+
         ┌───┬───┬───┬───┬───┬───┬───┬───┐
 Valor:  │28 │15 │34 │21 │19 │40 │12 │26 │
         └───┴───┴───┴───┴───┴───┴───┴───┘
@@ -96,6 +81,8 @@ Cada elemento se puede acceder utilizando su índice. Por ejemplo, vector[0] con
 2.2 Obtener el valor mayor y menor
 
 Código utilizado
+
+
 int mayor = vector[0];
 int menor = vector[0];
 
@@ -107,33 +94,31 @@ for (int i = 1; i < vector.length; i++) {
         menor = vector[i];
     }
 }
+
+
 Resultado
+
 Valor mayor: 40
 Valor menor: 12
 
 2.3 Insertar un nuevo valor
 
-Como los arreglos de Java tienen un tamaño fijo, para insertar un nuevo elemento se crea un segundo arreglo con una posición adicional.
-
-El programa solicita al usuario:
-
-El nuevo valor.
-La posición donde desea insertarlo.
-
 Código utilizado
+
+
 int[] nuevoVector = new int[vector.length + 1];
 
 for (int i = 0; i < posicion; i++) {
     nuevoVector[i] = vector[i];
 }
-
 nuevoVector[posicion] = nuevoValor;
 
 for (int i = posicion; i < vector.length; i++) {
     nuevoVector[i + 1] = vector[i];
 }
 
-Antes de realizar la inserción también se valida que la posición se encuentre dentro del rango permitido:
+Antes de realizar la inserción también se valida que la posición se encuentre dentro del rango permitido
+
 
 if (posicion < 0 || posicion > vector.length) {
     System.out.println("Posición no válida.");
