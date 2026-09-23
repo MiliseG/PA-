@@ -1,7 +1,7 @@
 # README — Evaluación
 
-> **Curso:** PROGRAMACION WEB - II  
-> **Código:** 30690  
+> **Curso:**  ALGORITMO Y ESTRUCTURA DE DATOS BASADOS EN INTELIGENCIA ARTIFICIAL 
+> **Código:** 4682
 > **Evaluación:** PA1
 > **Equipo:** [Grupo 3]  
 
